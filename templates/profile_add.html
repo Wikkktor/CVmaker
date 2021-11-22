@@ -2,51 +2,55 @@
 {% block content %}
     <div class="row myform">
         <div class="col-sm-6">
-            <div id="form_step" style="text-align: center">
-                <h1>Krok Pierwszy</h1>
-                <input class="file-upload" type="file" name="photo"><br>
-                <input type="text" name="name" placeholder="imie"><br>
-                <input type="text" name="last_name" placeholder="Nazwisko">
-                <input type="text" name="city" placeholder="miasto">
-                <input type="text" name="street" placeholder="ulica">
-                <input type="text" name="stanowisko" placeholder="stanowisko">
-                <input type="text" name="email" placeholder="email">
-                <input type="text" name="phone_number" placeholder="Numer telefonu"><br>
-                <button id="form_1_step_btn">Dalej</button>
-            </div>
-            <div id="form_step" style="text-align: center">
-                <h1>O mnie</h1>
-                <input type="text" name="link" placeholder="link"><br>
-                <textarea name="about_me" rows="4" cols="50"></textarea><br>
-                <button id="form_step_back"> Wstecz</button>
-                <button id="form_step_next">Dalej</button>
-            </div>
-            <div id="form_step" style="text-align: center">
-                <h1>Doświadczenie</h1>
-                <input type="text" name="company" placeholder="Nazwa firmy">
-                <input type="text" name="function" placeholder="Stanowisko">
-                <input type="date" name="started">
-                <input type="date" name="ended">
-                <textarea name="description" rows="4" cols="50">Opis</textarea><br>
-                <button id="form_step_back"> Wstecz</button>
-                <button id="form_step_next">Dalej</button>
-            </div>
-            <div id="form_step" style="text-align: center">
-                <h1>Edukacja</h1>
-                <input type="text" name="school" placeholder="Szkoła">
-                <input type="text" name="degree" placeholder="Poziom">
-                <input type="date" name="started">
-                <input type="date" name="ended"><br>
-                <button id="form_step_back"> Wstecz</button>
-                <button id="form_step_next">Dalej</button>
-            </div>
-            <div id="form_step" style="text-align: center">
-                <h1>Umiejętności</h1>
-                <input type="text" name="skill" placeholder="np. Python">
-                <button id="form_step_back"> Wstecz</button>
-                <button id="form_step_next">Dalej</button>
-            </div>
+            <form method="post">
+                {% csrf_token %}
+                <div id="form_step" style="text-align: center">
+                    <h1>Podstawowe informacje</h1>
+                    <input class="form-control" type="file" name="photo"><br>
+                    <input class="form-control" type="text" name="name" placeholder="imie"><br>
+                    <input class="form-control" type="text" name="last_name" placeholder="Nazwisko">
+                    <input class="form-control" type="text" name="city" placeholder="miasto">
+                    <input class="form-control" type="text" name="street" placeholder="ulica">
+                    <input class="form-control" type="text" name="stanowisko" placeholder="stanowisko">
+                    <input class="form-control" type="text" name="email" placeholder="email">
+                    <input class="form-control"  type="text" name="phone_number" placeholder="Numer telefonu"><br>
+                    <button style="background-color: green" class="form-control" id="form_1_step_btn">Dalej</button>
+                </div>
+                <div id="form_step" style="text-align: center">
+                    <h1>O mnie</h1>
+                    <input class="form-control" type="text" name="link" placeholder="link"><br>
+                    <textarea class="form-control" name="about_me" rows="4" cols="50"></textarea><br>
+                    <button style='background-color: coral' class="form-control" id="form_step_back"> Wstecz</button>
+                    <button style="background-color: green" class="form-control" id="form_step_next">Dalej</button>
+                </div>
+                <div id="form_step" style="text-align: center">
+                    <h1>Doświadczenie</h1>
+                    <input class="form-control" type="text" name="company" placeholder="Nazwa firmy">
+                    <input class="form-control" type="text" name="function" placeholder="Stanowisko">
+                    <input class="form-control" type="date" name="started">
+                    <input class="form-control" type="date" name="ended">
+                    <textarea class="form-control" name="description" rows="4" cols="50">Opis</textarea><br>
+                    <button style='background-color: coral' class="form-control" id="form_step_back"> Wstecz</button>
+                    <button style="background-color: green" class="form-control" id="form_step_next">Dalej</button>
+                </div>
+                <div id="form_step" style="text-align: center">
+                    <h1>Edukacja</h1>
+                    <input class="form-control" type="text" name="school" placeholder="Szkoła">
+                    <input class="form-control" type="text" name="degree" placeholder="Poziom">
+                    <input class="form-control" type="date" name="started">
+                    <input class="form-control" type="date" name="ended"><br>
+                    <button style='background-color: coral' class="form-control" id="form_step_back"> Wstecz</button>
+                    <button style="background-color: green" class="form-control" id="form_step_next">Dalej</button>
+                </div>
+                <div id="form_step" style="text-align: center">
+                    <h1>Umiejętności</h1>
+                    <input class="form-control" type="text" name="skill" placeholder="np. Python">
+                    <button style='background-color: coral' class="form-control" id="form_step_back"> Wstecz</button>
+                    <button style="background-color: green" class="form-control" type='submit' id="form_step_next">Dalej</button>
+                </div>
+            </form>
         </div>
+
         <div style="text-align: center" class="col-sm-6">
             <h1> Podgląd </h1>
         </div>
