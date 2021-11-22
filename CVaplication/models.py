@@ -13,21 +13,11 @@ class Profile(models.Model):
     email = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=255)
     link = models.TextField()
-
-
-class Experience(models.Model):
     company = models.CharField(max_length=255)
     function = models.CharField(max_length=255)
     description = models.TextField()
     started = models.DateField()
     ended = models.DateField(null=True)
-
-
-class Education(models.Model):
     school = models.CharField(max_length=255)
     degree = models.CharField(max_length=255)
-    description = models.TextField()
-
-
-class Skills(models.Model):
     skill = models.TextField()
