@@ -2,9 +2,9 @@
 {% block content %}
     <div class="row myform">
         <div class="col-sm-6">
-            <form method="post">
+            <form>
                 {% csrf_token %}
-                <div id="form_step" style="text-align: center">
+                <div id="form_step" style="text-align: center" class="">
                     <h1>Podstawowe informacje</h1>
                     <input class="form-control" type="file" name="photo"><br>
                     <input class="form-control" type="text" name="name" placeholder="imie"><br>
@@ -14,16 +14,16 @@
                     <input class="form-control" type="text" name="stanowisko" placeholder="stanowisko">
                     <input class="form-control" type="text" name="email" placeholder="email">
                     <input class="form-control"  type="text" name="phone_number" placeholder="Numer telefonu"><br>
-                    <button style="background-color: green" class="form-control" id="form_1_step_btn">Dalej</button>
+                    <button style="background-color: green" class="form-control" id="form_step_next">Dalej</button>
                 </div>
-                <div id="form_step" style="text-align: center">
+                <div id="form_step" style="text-align: center" class="invisible">
                     <h1>O mnie</h1>
                     <input class="form-control" type="text" name="link" placeholder="link"><br>
                     <textarea class="form-control" name="about_me" rows="4" cols="50"></textarea><br>
                     <button style='background-color: coral' class="form-control" id="form_step_back"> Wstecz</button>
                     <button style="background-color: green" class="form-control" id="form_step_next">Dalej</button>
                 </div>
-                <div id="form_step" style="text-align: center">
+                <div id="form_step" style="text-align: center" class="invisible">
                     <h1>Doświadczenie</h1>
                     <input class="form-control" type="text" name="company" placeholder="Nazwa firmy">
                     <input class="form-control" type="text" name="function" placeholder="Stanowisko">
@@ -33,7 +33,7 @@
                     <button style='background-color: coral' class="form-control" id="form_step_back"> Wstecz</button>
                     <button style="background-color: green" class="form-control" id="form_step_next">Dalej</button>
                 </div>
-                <div id="form_step" style="text-align: center">
+                <div id="form_step" style="text-align: center" class="invisible">
                     <h1>Edukacja</h1>
                     <input class="form-control" type="text" name="school" placeholder="Szkoła">
                     <input class="form-control" type="text" name="degree" placeholder="Poziom">
@@ -42,7 +42,7 @@
                     <button style='background-color: coral' class="form-control" id="form_step_back"> Wstecz</button>
                     <button style="background-color: green" class="form-control" id="form_step_next">Dalej</button>
                 </div>
-                <div id="form_step" style="text-align: center">
+                <div id="form_step" style="text-align: center" class="invisible">
                     <h1>Umiejętności</h1>
                     <input class="form-control" type="text" name="skill" placeholder="np. Python">
                     <button style='background-color: coral' class="form-control" id="form_step_back"> Wstecz</button>
