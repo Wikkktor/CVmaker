@@ -9,12 +9,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     let counter = 0;
+    button_next.forEach(function (button) {
+        button.addEventListener('click', function () {
+            console.log("adasdad")
+            form_elements[counter].classList.add('d-none')
+            counter++;
+            form_elements[counter].classList.remove('d-none')
 
+        })
+    })
+    button_previous.forEach(function (button) {
+        button.addEventListener('click', function () {
+            console.log("adasdad")
+            form_elements[counter].classList.add('d-none')
+            counter--;
+            form_elements[counter].classList.remove('d-none')
 
-    button_next.addEventListener('click', function () {
-        form_elements[counter].classList.add('invisible')
-        counter++;
-        form_elements[counter].classList.remove('invisible')
+        })
     })
 
 
