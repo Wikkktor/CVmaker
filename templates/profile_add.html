@@ -1,6 +1,6 @@
 {% extends 'main_page.html' %}
 {% block content %}
-    <div class="row myform">
+    <div class="row myform" style="--bs-gutter-x: 0;">
         <div class="col-sm-6">
             <form method="post">
                 {% csrf_token %}
@@ -65,8 +65,57 @@
             </form>
         </div>
 
-        <div style="text-align: center" class="col-sm-6 cvsee">
+        <div style="text-align: center;" class="col-sm-6 cvsee">
             <h1> Podgląd </h1>
+            <div style="margin: auto; width: 80%; height: 100vh; background-color: green">
+                <div class="row" style="--bs-gutter-x: 0; height: 10vh;">
+                    {#                    Left side#}
+
+                    <div style="margin-top: 2vh;" class="col-4">
+                        <div style="margin: auto; height: 8vh; background-color: red;"> Picture</div>
+                    </div>
+                    {#                      Right side#}
+                    <div style="margin-top: 2vh;" class="col-8">
+                        <div style="height: 100%">
+                            <h1>Wiktor Karaszewicz</h1>
+                            <h2> Stanowisko</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="--bs-gutter-x: 0; height: 10vh; margin-top: 2vh;">
+                    <div style="margin-top: 2vh;" class="col-4">
+                        <div style="text-align: left">
+                            <h2> Contact </h2>
+                            <span> Kanie , 05-805 Polska</span><br>
+                            <span> Telefon: 42124124</span><br>
+                            <span> wkaraszewicz@gmail.com</span><br>
+                        </div>
+                        <div style="text-align: left; margin-top: 4vh;">
+                            <h3> EDUCATION </h3>
+                        </div>
+                        <div style="text-align: left; margin-top: 3vh;">
+                            <h3> PORTFOLIO, WEBSITES</h3>
+                        </div>
+                        <div style="text-align: left; margin-top: 3vh;">
+                            <h3> CERTIFICATIONS </h3>
+                        </div>
+                        <div style="text-align: left; margin-top: 3vh;">
+                            <h3> LANGUAGES</h3>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2vh;" class="col-8">
+                        <div>
+                            <h3> PROFESIONAL SUMMARY</h3>
+                        </div>
+                        <div style="text-align: left">
+                            <h3>SKILLS</h3>
+                        </div>
+                        <div style="text-align: left">
+                            <h3>WORK HISTORY</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
