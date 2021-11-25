@@ -31,7 +31,7 @@
                     </li>
                 </div>
                 <div id="form_step" style="text-align: center; margin-top: 5vh;" class="d-none">
-                    <h1>O mnie</h1>
+                    <h1>PROFESSIONAL SUMMARY</h1>
                     <input class="form-control" type="text" name="link" placeholder="link">
                     <textarea class="form-control" name="about_me" rows="4" cols="50"></textarea>
                     <li style='background-color: coral; cursor:pointer' class="form-control" id="form_step_back">
@@ -43,9 +43,9 @@
                 <div id="form_step" style="text-align: center; margin-top: 5vh;" class="d-none">
                     <h1>Doświadczenie</h1>
                     <input class="form-control" type="text" name="company" placeholder="Nazwa firmy">
-                    <input class="form-control" type="text" name="function" placeholder="Stanowisko">
-                    <input class="form-control" type="date" name="started">
-                    <input class="form-control" type="date" name="ended">
+                    <input class="form-control" type="text" name="company_function" placeholder="Stanowisko">
+                    <input class="form-control" type="date" name="company_started">
+                    <input class="form-control" type="date" name="company_ended">
                     <textarea class="form-control" name="description" rows="4" cols="50">Opis</textarea>
                     <li style='background-color: coral; cursor:pointer' class="form-control" id="form_step_back">
                         Wstecz
@@ -94,17 +94,19 @@
                         </div>
                         <div style="text-align: left; margin-top: 4vh;">
                             <h3> EDUCATION </h3>
-                            <span id="school"></span>
-                            <span id="subject"></span>
-                            <span id="degree"></span>
+                            <span id="school"></span><br>
+                            <span id="subject"></span>,
+                            <span id="degree"></span><br>
                             <span>Started: </span><span id="started"></span><br>
                             <span>Ended: </span><span id="ended"></span>
                         </div>
                         <div style="text-align: left; margin-top: 3vh;">
                             <h3> PORTFOLIO, WEBSITES</h3>
+                            <span id="link"></span>
                         </div>
                         <div style="text-align: left; margin-top: 3vh;">
                             <h3> CERTIFICATIONS </h3>
+                            <span id="certification"></span>
                         </div>
                         <div style="text-align: left; margin-top: 3vh;">
                             <h3> LANGUAGES</h3>
@@ -112,13 +114,20 @@
                     </div>
                     <div style="margin-top: 2vh;" class="col-8">
                         <div>
-                            <h3> PROFESIONAL SUMMARY</h3>
+                            <h3>PROFESSIONAL SUMMARY</h3>
+                            <span id="professional_summary"></span>
                         </div>
                         <div style="text-align: left">
                             <h3>SKILLS</h3>
+                            <span id="skill"></span>
                         </div>
                         <div style="text-align: left">
                             <h3>WORK HISTORY</h3>
+                            <span id="company"></span><br>
+                            <span id="company_function"></span><br>
+                            <span id="company_started"></span>
+                            <span id="company_ended"></span>
+                            <span id="description"></span>
                         </div>
                     </div>
                 </div>

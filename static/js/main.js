@@ -74,4 +74,76 @@ document.addEventListener("DOMContentLoaded", function () {
     school_input.onkeyup = function () {
         school.innerText = school_input.value
     }
+
+    const degree = document.querySelector("#degree")
+    const degree_input = document.getElementsByName("degree")[0]
+    degree_input.onkeyup = function () {
+        degree.innerText = degree_input.value
+    }
+
+    const subject = document.querySelector("#subject")
+    const subject_input = document.getElementsByName("subject")[0]
+    subject_input.onkeyup = function () {
+        subject.innerText = subject_input.value
+    }
+
+    const started = document.querySelector("#started")
+    const started_input = document.getElementsByName("started")[0]
+    started_input.onkeyup = function () {
+        started.innerText = started_input.value
+    }
+
+    const ended = document.querySelector("#ended")
+    const ended_input = document.getElementsByName("ended")[0]
+    ended_input.onkeyup = function () {
+        ended.innerText = ended_input.value
+    }
+
+    const link = document.querySelector("#link")
+    const link_input = document.getElementsByName("link")[0]
+    link_input.onkeyup = function () {
+        link.innerText = link_input.value
+    }
+
+    const professional_summary = document.querySelector("#professional_summary")
+    const professional_summary_input = document.getElementsByName("about_me")[0]
+    professional_summary_input.onkeyup = function () {
+        professional_summary.innerText = professional_summary_input.value
+    }
+
+    const company = document.querySelector("#company")
+    const company_input = document.getElementsByName("company")[0]
+    company_input.onkeyup = function () {
+        company.innerText = company_input.value
+    }
+
+    const company_function = document.querySelector("#company_function")
+    const company_function_input = document.getElementsByName("company_function")[0]
+    company_function_input.onkeyup = function () {
+        company_function.innerText = company_function_input.value
+    }
+
+    const company_started = document.querySelector("#company_started")
+    const company_started_input = document.getElementsByName("company_started")[0]
+    company_started_input.onkeyup = function () {
+        company_started.innerText = company_started_input.value
+    }
+
+    const company_ended = document.querySelector("#company_ended")
+    const company_ended_input = document.getElementsByName("company_ended")[0]
+    company_ended_input.onkeyup = function () {
+        company_ended.innerText = company_ended_input.value
+    }
+
+    const description = document.querySelector("#description")
+    const description_input = document.getElementsByName("description")[0]
+    description_input.onkeyup = function () {
+        description.innerText = description_input.value
+    }
+
+    const skill = document.querySelector("#skill")
+    const skill_input = document.getElementsByName("skill")[0]
+    skill_input.onkeyup = function () {
+        skill.innerText = skill_input.value
+    }
 })
