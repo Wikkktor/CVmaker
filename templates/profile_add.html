@@ -31,9 +31,61 @@
                     </li>
                 </div>
                 <div id="form_step" style="text-align: center; margin-top: 5vh;" class="d-none">
+                    <h1>CERTYFIKATY</h1>
+                    <li style="background-color: black; cursor:pointer; color: white; width: 40%; display: inline"
+                        class="form-control" id="add_certification">Add another certificat
+                    </li>
+                    <div id="certifications_div">
+                        <div>
+                            <input class="form-control" type="text" name="certificate_name" placeholder="Nazwa">
+                            <input class="form-control" type="text" name="certificate_institution"
+                                   placeholder="Od kogo ten certyfikat">
+                            <input class="form-control" type="date" name="certificate_ended"><br>
+                        </div>
+                    </div>
+                    <li style='background-color: coral; cursor:pointer' class="form-control" id="form_step_back">
+                        Wstecz
+                    </li>
+                    <li style="background-color: green; cursor:pointer" class="form-control" id="form_step_next">Dalej
+                    </li>
+                </div>
+                <div id="form_step" style="text-align: center; margin-top: 5vh;" class="d-none">
+                    <h1>JĘZYKI OBCE</h1>
+                    <li style="background-color: black; cursor:pointer; color: white; width: 40%; display: inline"
+                        class="form-control" id="add_language">Add another language
+                    </li>
+                    <div id="languages_div">
+                        <div>
+                            <input class="form-control" type="text" name="language_name" placeholder="Nazwa">
+                            <select class="form-control" name="language_level" style="margin-bottom: 2vh">
+                                <option value="A1">A1</option>
+                                <option value="A2">A2</option>
+                                <option value="B1">B1</option>
+                                <option value="B2">B2</option>
+                                <option value="C1">C1</option>
+                                <option value="C2">C2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <li style='background-color: coral; cursor:pointer' class="form-control" id="form_step_back">
+                        Wstecz
+                    </li>
+                    <li style="background-color: green; cursor:pointer" class="form-control" id="form_step_next">
+                        Dalej
+                    </li>
+                </div>
+                <div id="form_step" style="text-align: center; margin-top: 5vh;" class="d-none">
                     <h1>PROFESSIONAL SUMMARY</h1>
-                    <input class="form-control" type="text" name="link" placeholder="link">
                     <textarea class="form-control" name="about_me" rows="4" cols="50"></textarea>
+                    <h1>LINKS</h1>
+                    <li style="background-color: black; cursor:pointer; color: white; width: 40%; display: inline"
+                        class="form-control" id="add_link">Add another link
+                    </li>
+                    <div id="links_div">
+                        <div>
+                            <input class="form-control" type="text" name="link" placeholder="link">
+                        </div>
+                    </div>
                     <li style='background-color: coral; cursor:pointer' class="form-control" id="form_step_back">
                         Wstecz
                     </li>
@@ -55,6 +107,9 @@
                 </div>
                 <div id="form_step" style="text-align: center; margin-top: 5vh;" class="d-none">
                     <h1>Umiejętności</h1>
+                    <li style="background-color: black; cursor:pointer; color: white; width: 40%; display: inline"
+                        class="form-control" id="add_skill">Add another skill
+                    </li>
                     <input class="form-control" type="text" name="skill" placeholder="np. Python">
                     <li style='background-color: coral; cursor:pointer' class="form-control" id="form_step_back">
                         Wstecz
@@ -106,10 +161,14 @@
                         </div>
                         <div style="text-align: left; margin-top: 3vh;">
                             <h3> CERTIFICATIONS </h3>
-                            <span id="certification"></span>
+                            <span id="certificate_name"></span>
+                            <span id="certificate_institution"></span>
+                            <span id="certificate_ended"></span>
                         </div>
                         <div style="text-align: left; margin-top: 3vh;">
                             <h3> LANGUAGES</h3>
+                            <span id="language_name"></span>
+                            <span id="language_level"></span>
                         </div>
                     </div>
                     <div style="margin-top: 2vh;" class="col-8">

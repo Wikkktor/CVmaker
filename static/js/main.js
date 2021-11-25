@@ -146,4 +146,70 @@ document.addEventListener("DOMContentLoaded", function () {
     skill_input.onkeyup = function () {
         skill.innerText = skill_input.value
     }
+
+    const certificate_name = document.querySelector("#certificate_name")
+    const certificate_name_input = document.getElementsByName("certificate_name")[0]
+    certificate_name_input.onkeyup = function () {
+        certificate_name.innerText = certificate_name_input.value
+    }
+
+    const certificate_institution = document.querySelector("#certificate_institution")
+    const certificate_institution_input = document.getElementsByName("certificate_institution")[0]
+    certificate_institution_input.onkeyup = function () {
+        certificate_institution.innerText = certificate_institution_input.value
+    }
+
+    const certificate_ended = document.querySelector("#certificate_ended")
+    const certificate_ended_input = document.getElementsByName("certificate_ended")[0]
+    certificate_ended_input.onkeyup = function () {
+        certificate_ended.innerText = certificate_ended_input.value
+    }
+
+    const language_name = document.querySelector("#language_name")
+    const language_name_input = document.getElementsByName("language_name")[0]
+    language_name_input.onkeyup = function () {
+        language_name.innerText = language_name_input.value
+    }
+
+    const language_level = document.querySelector("#language_level")
+    const language_level_input = document.getElementsByName("language_level")[0]
+    language_level_input.onkeyup = function () {
+        language_level.innerText = language_level_input.value
+    }
+
+    // adding_buttons
+    const certification_div = document.querySelector("#certifications_div")
+    const certification_add = document.querySelector("#add_certification")
+    certification_add.addEventListener("click", function () {
+        let div = document.createElement("div")
+        div.innerHTML = "<input class=\"form-control\" type=\"text\" name=\"certificate_name\" placeholder=\"Nazwa\">\n" +
+            "                        <input class=\"form-control\" type=\"text\" name=\"certificate_institution\"\n" +
+            "                               placeholder=\"Od kogo ten certyfikat\">\n" +
+            "                        <input class=\"form-control\" type=\"date\" name=\"certificate_ended\"><br>"
+        certification_div.appendChild(div)
+    })
+
+    const languages_div = document.querySelector("#languages_div")
+    const add_language = document.querySelector("#add_language")
+    add_language.addEventListener("click", function () {
+        let div = document.createElement("div")
+        div.innerHTML = "<input class=\"form-control\" type=\"text\" name=\"language_name\" placeholder=\"Nazwa\">\n" +
+            "                            <select class=\"form-control\" name=\"language_level\" style=\"margin-bottom: 2vh\">\n" +
+            "                                <option value=\"A1\">A1</option>\n" +
+            "                                <option value=\"A2\">A2</option>\n" +
+            "                                <option value=\"B1\">B1</option>\n" +
+            "                                <option value=\"B2\">B2</option>\n" +
+            "                                <option value=\"C1\">C1</option>\n" +
+            "                                <option value=\"C2\">C2</option>\n" +
+            "                            </select>"
+        languages_div.appendChild(div)
+    })
+
+    const links_div = document.querySelector("#links_div")
+    const add_link = document.querySelector("#add_link")
+    add_link.addEventListener("click", function () {
+        let div = document.createElement("div")
+        div.innerHTML = "<input class=\"form-control\" type=\"text\" name=\"link\" placeholder=\"link\">"
+        links_div.appendChild(div)
+    })
 })
