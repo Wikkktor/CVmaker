@@ -212,4 +212,12 @@ document.addEventListener("DOMContentLoaded", function () {
         div.innerHTML = "<input class=\"form-control\" type=\"text\" name=\"link\" placeholder=\"link\">"
         links_div.appendChild(div)
     })
+
+    const skill_div = document.querySelector("#skill_div")
+    const add_skill = document.querySelector("#add_skill")
+    add_skill.addEventListener("click", function () {
+        let div = document.createElement("div")
+        div.innerHTML = "<input class=\"form-control\" type=\"text\" name=\"skill\" placeholder=\"np. Python\">"
+        skill_div.appendChild(div)
+    })
 })
