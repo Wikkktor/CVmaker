@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from django.views import View
 from django.shortcuts import render
 from CVaplication.models import Profile
+from CVaplication.render_pdf import render_to_pdf
+
 
 class MainPageView(View):
     # Main Page view
@@ -52,3 +54,14 @@ class ResumeCreator(View):
         profile.skill = request.POST.getlist('skill')
         profile.save()
         return HttpResponse("UDAŁO SIĘ")
+
+
+class GeneratePdf(View):
+    def get(self, request, *args, **kwargs):
+        data = {
+            'profiles': Profile.objects.all()
+        }
+        pdf = render_to_pdf('pdf/template_1.html', data)
+        if pdf:
+            return HttpResponse(pdf, content_type='application/pdf')
+        return HttpResponse("Ups, something bad had happened")
