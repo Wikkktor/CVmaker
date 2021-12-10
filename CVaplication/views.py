@@ -6,13 +6,19 @@ from CVaplication.render_pdf import render_to_pdf
 
 
 class MainPageView(View):
-    # Main Page view
+    """
+    Main page view
+    """
     def get(self, request):
         response = render(request, 'main_page.html')
         return response
 
 
 class ResumeCreator(View):
+    """
+    Cv creator view with form and
+    saving data to database
+    """
     def get(self, request):
         response = render(request, 'profile_add.html')
         return response
@@ -58,9 +64,13 @@ class ResumeCreator(View):
 
 
 class GeneratePdf(View):
+    """
+    View that generates html file with resume template to pdf
+    """
     def get(self, request, *args, **kwargs):
+        user = request.user
         data = {
-            'profiles': Profile.objects.all()
+            'profiles': Profile.objects.all().filter(user=user)
         }
         pdf = render_to_pdf('pdf/template_1.html', data)
         if pdf:
