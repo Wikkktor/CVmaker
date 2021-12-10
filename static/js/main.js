@@ -220,4 +220,16 @@ document.addEventListener("DOMContentLoaded", function () {
         div.innerHTML = "<input class=\"form-control\" type=\"text\" name=\"skill\" placeholder=\"np. Python\">"
         skill_div.appendChild(div)
     })
+
+    const experience_div = document.querySelector("#experience_div")
+    const add_experience = document.querySelector("#add_experience")
+    add_experience.addEventListener("click", function () {
+        let div = document.createElement("div")
+        div.innerHTML = "<input class=\"form-control\" type=\"text\" name=\"company\" placeholder=\"Nazwa firmy\">\n" +
+            "                        <input class=\"form-control\" type=\"text\" name=\"company_function\" placeholder=\"Stanowisko\">\n" +
+            "                        <input class=\"form-control\" type=\"date\" name=\"company_started\">\n" +
+            "                        <input class=\"form-control\" type=\"date\" name=\"company_ended\">\n" +
+            "                        <textarea class=\"form-control\" name=\"description\" rows=\"4\" cols=\"50\">Opis</textarea>"
+        experience_div.appendChild(div)
+    })
 })
