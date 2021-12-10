@@ -13,7 +13,7 @@
                     <input class="form-control" type="text" name="street" placeholder="ulica">
                     <input class="form-control" type="text" name="position" placeholder="stanowisko">
                     <input class="form-control" type="text" name="phone_number" placeholder="Numer telefonu">
-                    <input class="form-control" type="text" name="email" placeholder="email">
+                    <input class="form-control" type="email" name="email" placeholder="email">
                     <li style="background-color: green; cursor:pointer" class="form-control" id="form_step_next">Dalej
                     </li>
                 </div>
@@ -22,8 +22,8 @@
                     <input class="form-control" type="text" name="school" placeholder="Szkoła">
                     <input class="form-control" type="text" name="degree" placeholder="Poziom">
                     <input class="form-control" type="text" name="subject" placeholder="Kierunek">
-                    <input class="form-control" type="date" name="started">
-                    <input class="form-control" type="date" name="ended"><br>
+                    <input class="form-control" type="month" name="started">
+                    <input class="form-control" type="month" name="ended"><br>
                     <li style='background-color: coral; cursor:pointer' class="form-control" id="form_step_back">
                         Wstecz
                     </li>
@@ -40,7 +40,7 @@
                             <input class="form-control" type="text" name="certificate_name" placeholder="Nazwa">
                             <input class="form-control" type="text" name="certificate_institution"
                                    placeholder="Od kogo ten certyfikat">
-                            <input class="form-control" type="date" name="certificate_ended"><br>
+                            <input class="form-control" type="month" name="certificate_ended"><br>
                         </div>
                     </div>
                     <li style='background-color: coral; cursor:pointer' class="form-control" id="form_step_back">
@@ -94,11 +94,16 @@
                 </div>
                 <div id="form_step" style="text-align: center; margin-top: 5vh;" class="d-none">
                     <h1>Doświadczenie</h1>
-                    <input class="form-control" type="text" name="company" placeholder="Nazwa firmy">
-                    <input class="form-control" type="text" name="company_function" placeholder="Stanowisko">
-                    <input class="form-control" type="date" name="company_started">
-                    <input class="form-control" type="date" name="company_ended">
-                    <textarea class="form-control" name="description" rows="4" cols="50">Opis</textarea>
+                    <li style="background-color: black; cursor:pointer; color: white; width: 40%; display: inline"
+                        class="form-control" id="add_experience">Add another experience
+                    </li>
+                    <div id="experience_div">
+                        <input class="form-control" type="text" name="company" placeholder="Nazwa firmy">
+                        <input class="form-control" type="text" name="company_function" placeholder="Stanowisko">
+                        <input class="form-control" type="date" name="company_started">
+                        <input class="form-control" type="date" name="company_ended">
+                        <textarea class="form-control" name="description" rows="4" cols="50">Opis</textarea>
+                    </div>
                     <li style='background-color: coral; cursor:pointer' class="form-control" id="form_step_back">
                         Wstecz
                     </li>
