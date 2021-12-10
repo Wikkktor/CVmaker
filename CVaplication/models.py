@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
@@ -38,3 +39,4 @@ class Profile(models.Model):
     about_me = models.TextField(null=True)
     company_started = models.CharField(max_length=255, null=True)
     company_ended = models.CharField(null=True, max_length=255)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
