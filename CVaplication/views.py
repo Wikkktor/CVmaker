@@ -52,6 +52,7 @@ class ResumeCreator(View):
         profile.description = request.POST.getlist('description')
         # Seventh form step
         profile.skill = request.POST.getlist('skill')
+        profile.user = request.user
         profile.save()
         return HttpResponse("UDAŁO SIĘ")
 
