@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Profile(models.Model):
-    language_lvl = [
+    LANGUAGE_LVL = [
         (1, 'A1'),
         (2, 'A2'),
         (3, 'B1'),
@@ -18,23 +18,23 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=255)
     city = models.CharField(max_length=100, null=True)
     street = models.CharField(max_length=255, null=True)
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, null= True)
     email = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=255)
-    link = models.TextField()
-    company = models.CharField(max_length=255)
-    function = models.CharField(max_length=255)
-    description = models.TextField()
-    started = models.DateField()
-    ended = models.DateField(null=True)
+    link = models.TextField(null=True)
+    company = models.CharField(max_length=255, null=True)
+    function = models.CharField(max_length=255, null=True)
+    description = models.TextField(null=True)
+    started = models.CharField(max_length=255, null=True)
+    ended = models.CharField(max_length=255, null=True)
     school = models.CharField(max_length=255)
-    subject = models.CharField(max_length=255)
-    degree = models.CharField(max_length=255)
-    skill = models.TextField()
-    certificate_name = models.CharField(max_length=255)
-    certificate_institution = models.CharField(max_length=255)
-    language_name = models.CharField(max_length=255)
-    language_level = models.IntegerField(default=1, choices=language_lvl)
+    subject = models.CharField(max_length=255, null=True)
+    degree = models.CharField(max_length=255, null=True)
+    skill = models.TextField(null=True)
+    certificate_name = models.CharField(max_length=255, null=True)
+    certificate_institution = models.CharField(max_length=255, null=True)
+    language_name = models.CharField(max_length=255, null=True)
+    language_level = models.CharField(default='A1', choices=LANGUAGE_LVL, max_length=255, null=True)
     about_me = models.TextField(null=True)
-    company_started = models.DateField(null=True)
-    company_ended = models.DateField(null=True)
+    company_started = models.CharField(max_length=255, null=True)
+    company_ended = models.CharField(null=True, max_length=255)
