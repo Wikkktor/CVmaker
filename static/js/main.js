@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     })
     const first_name = document.querySelector("#first_name")
-    const first_name_input = document.getElementsByName('name')[0]
+    const first_name_input = document.getElementsByName('first_name')[0]
     first_name_input.onkeyup = function () {
         first_name.innerText = first_name_input.value
     }
